@@ -1,0 +1,8 @@
+# Site settings
+title: Thought is the language, impossible is nothing
+description: "Notes to myself on how I did something and could be helpful for others too."
+url: "http://192.168.99.100:4000" # the base hostname & protocol for your site
+destination: ../site/
+
+# Build settings
+markdown: kramdown
