@@ -3,7 +3,7 @@ layout: default
 title: "Blog"
 ---
 <div class="home">
-  <h1 class="page-heading">Posts</h1>
+  <!-- <h1 class="page-heading">Posts</h1> -->
 
   <ul class="post-list">
     {% for post in site.posts %}
@@ -13,7 +13,10 @@ title: "Blog"
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <h5>Summary</h5>
         <h6>{{post.summary}}</h6>
+        <h6><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read More ..</a></h6>
+
       </li>
     {% endfor %}
   </ul>

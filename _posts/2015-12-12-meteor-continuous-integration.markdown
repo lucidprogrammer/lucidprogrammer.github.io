@@ -4,6 +4,7 @@ title:  "Meteor Continuous Integration & Deployment - Bitbucket to Digital Ocean
 date:   2015-12-11 13:33:04
 categories: meteor
 summary: Source code for the meteor application is in a private repository in bitbucket. It is deployed as a dockerised node application in Digital Ocean. Master branch is used for staging and the release branch is used for production. Whenever there is a change in the master branch, velocity tests are to run if it all works, it is to be deployed as a dockerised container in digital ocean.
+
 ---
 # **Meteor Continuous Integration & Deployment - Bitbucket to Digital Ocean.**
 
