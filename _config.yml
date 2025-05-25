@@ -1,4 +1,6 @@
 # Site Settings
+theme: minimal-mistakes-jekyll
+search: true
 locale: "en-US"
 title: "John Cyriac"
 title_separator: "-"
@@ -8,6 +10,14 @@ description: "20+ years building distributed systems, databases, and cloud infra
 url: "https://lucidprogrammer.github.io"
 baseurl: ""
 repository: "lucidprogrammer/lucidprogrammer.github.io"
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-algolia
 include:
   - _pages
 
