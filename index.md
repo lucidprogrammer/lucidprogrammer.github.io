@@ -3,7 +3,6 @@ layout: home
 author_profile: true
 ---
 
-# Technical Architect & Systems Engineer
 
 I specialize in building and optimizing distributed systems, with deep expertise in Kubernetes, cloud infrastructure, and database scaling. Over 20 years of experience spanning from hands-on engineering to technical consulting.
 
