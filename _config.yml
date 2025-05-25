@@ -8,6 +8,8 @@ description: "20+ years building distributed systems, databases, and cloud infra
 url: "https://lucidprogrammer.github.io"
 baseurl: ""
 repository: "lucidprogrammer/lucidprogrammer.github.io"
+include:
+  - _pages
 
 # Site Author
 author:
@@ -61,6 +63,13 @@ defaults:
       comments: false
       share: true
       related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
   # _papers
   - scope:
       path: ""
@@ -70,12 +79,3 @@ defaults:
       author_profile: true
       read_time: true
       share: true
-
-# Main navigation
-main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Papers"
-    url: /papers/
-  - title: "About"
-    url: /about/
