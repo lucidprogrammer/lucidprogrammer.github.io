@@ -22,7 +22,13 @@ I specialize in building and optimizing distributed systems, with deep expertise
 ## Background
 From building Java platforms at Sun Microsystems to scaling distributed systems for fintech companies, I've consistently focused on solving complex technical challenges. My experience spans multiple domains - from telecommunications to financial services to AI infrastructure.
 
+## Papers and Posts
 
+- [compliance-framework](/papers/compliance-framework.html)
+- [compliance-monitoring](/papers/compliance-monitoring.html)
+- [negotiation-framework](/papers/negotiation-framework.html)
+- [operational-risk-appetite](/papers/operational-risk-appetite.html)
+- [latentsync-gcp-mlops](/2024/12/29/latentsync-gcp-mlops.html)
 
 ---
 
