@@ -1,5 +1,5 @@
 # Site Settings
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
 search: true
 locale: "en-US"
 title: "John Cyriac"
