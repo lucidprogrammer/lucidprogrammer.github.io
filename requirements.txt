@@ -1,0 +1,5 @@
+Flask>=2.0
+Authlib>=1.0
+redis>=4.0
+Flask-Session>=0.4
+gunicorn; platform_system != "Windows" # Optional: for production deployment, not strictly in markdown but good practice

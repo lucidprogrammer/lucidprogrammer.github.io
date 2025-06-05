@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ portal_info.name }} - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f6f8;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+        .login-container p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+        .login-button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>{{ portal_info.icon }} {{ portal_info.name }}</h1>
+        <p>{{ portal_info.description }}</p>
+        <a href="{{ url_for('admin_auth') }}" class="login-button">Login with Keycloak</a>
+    </div>
+</body>
+</html>

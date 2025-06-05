@@ -1,0 +1,207 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Header Styles */
+.header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #007bff;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: #adb5bd;
+}
+
+.user-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255,255,255,0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.user-badge span {
+    margin-right: 15px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-primary { background-color: #007bff; color: white; }
+.btn-secondary { background-color: #6c757d; color: white; }
+.btn-success { background-color: #28a745; color: white; }
+.btn-danger { background-color: #dc3545; color: white; }
+.btn-warning { background-color: #ffc107; color: black; }
+.btn-info { background-color: #17a2b8; color: white; }
+.btn-sm { padding: 5px 10px; font-size: 0.8em; }
+
+/* Dashboard Specific Styles */
+.dashboard-content h2 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.user-info, .stats-grid, .pending-items-list, .admin-actions {
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.user-info h3, .pending-items-list h3, .admin-actions h4 {
+    margin-top: 0;
+    color: #495057;
+}
+
+.info-grid, .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-item label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-item span {
+    color: #333;
+}
+
+.stat-item {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.stat-item h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    color: #007bff;
+}
+
+.stat-item p {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+    color: #343a40;
+}
+
+.approval-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.approval-type {
+    font-weight: bold;
+    color: #007bff;
+    flex-basis: 25%;
+}
+
+.approval-desc {
+    flex-basis: 50%;
+    color: #555;
+}
+
+.approval-actions {
+    flex-basis: 25%;
+    text-align: right;
+}
+
+/* Error Page Styles */
+.error-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+.error-message {
+    background-color: #ffebee; /* Light red */
+    color: #c62828; /* Darker red */
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ef9a9a; /* Lighter red border */
+    margin-bottom: 20px;
+    display: inline-block; /* Fit content */
+    text-align: left;
+}
+.error-message p {
+    margin: 10px 0;
+}
+.error-actions .btn {
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+    .user-badge {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .info-grid, .stats-grid {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+    .approval-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .approval-actions {
+        margin-top:10px;
+        text-align: left;
+    }
+}

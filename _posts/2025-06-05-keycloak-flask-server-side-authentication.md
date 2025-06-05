@@ -247,6 +247,7 @@ The dashboard demonstrates role-based access control and passes structured data 
 ### Base Template Structure
 
 ```html
+{% raw %}
 <!-- base.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -275,6 +276,7 @@ The dashboard demonstrates role-based access control and passes structured data 
     {% block scripts %}{% endblock %}
 </body>
 </html>
+{% endraw %}
 ```
 
 ### Dashboard Template
@@ -282,6 +284,7 @@ The dashboard demonstrates role-based access control and passes structured data 
 The dashboard template extends the base template and displays user information and administrative functions:
 
 ```html
+{% raw %}
 <!-- dashboard.html -->
 {% extends "base.html" %}
 
@@ -321,6 +324,7 @@ The dashboard template extends the base template and displays user information a
     {% endfor %}
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 ## Enterprise Logout Implementation
