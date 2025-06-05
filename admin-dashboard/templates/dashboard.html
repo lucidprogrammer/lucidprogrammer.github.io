@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}{{ portal_info.name }} - Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard-content">
+    <h2>Administrative Control Panel</h2>
+
+    <div class="user-info">
+        <h3>Administrator Information</h3>
+        <div class="info-grid">
+            <div class="info-item">
+                <label>Administrator:</label>
+                <span>{{ user.username }}</span>
+            </div>
+            <div class="info-item">
+                <label>Session Type:</label>
+                <span>🖥️ Server-Side Session</span>
+            </div>
+            <div class="info-item">
+                <label>Permissions:</label>
+                <span>{{ user.roles | join(', ') if user.roles else 'employee' }}</span>
+            </div>
+        </div>
+    </div>
+
+    {% if stats %}
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h4>Pending Approvals</h4>
+            <p>{{ stats.pending_approvals }}</p>
+        </div>
+        <div class="stat-item">
+            <h4>Active Users</h4>
+            <p>{{ stats.active_users }}</p>
+        </div>
+        <div class="stat-item">
+            <h4>Connected Systems</h4>
+            <p>{{ stats.connected_systems }}</p>
+        </div>
+        <div class="stat-item">
+            <h4>System Uptime</h4>
+            <p>{{ stats.system_uptime }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if pending_items %}
+    <h3>Pending Items</h3>
+    <div class="pending-items-list">
+        {% for item in pending_items %}
+        <div class="approval-item">
+            <div class="approval-type">{{ item.type }}</div>
+            <div class="approval-desc">{{ item.description }}</div>
+            <div class="approval-actions">
+                <button class="btn btn-success btn-sm">✅ Approve</button>
+                <button class="btn btn-warning btn-sm">⏳ Review</button>
+                <button class="btn btn-danger btn-sm">❌ Reject</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No pending items requiring action.</p>
+    {% endif %}
+
+    {% if is_admin %}
+    <div class="admin-actions">
+        <h4>Admin Tools</h4>
+        <button class="btn btn-primary">Manage Users</button>
+        <button class="btn btn-secondary">System Settings</button>
+        <button class="btn btn-info">View Audit Logs</button>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<!-- Add any dashboard specific JS here if needed -->
+{% endblock %}
